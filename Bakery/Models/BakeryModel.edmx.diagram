@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="02738cb5e31c42a983e3fdf1e1359284" Name="Diagram1">
+        <EntityTypeShape EntityType="BakeryModel.Accesory" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Additive" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Adress" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.CakeCreator" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Category" Width="1.5" PointX="0.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Company" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Cream" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Customer" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Filling" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.FinishedOrder" Width="1.5" PointX="7.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Finish" Width="1.5" PointX="0.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Icing" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Level" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.OrderDetail" Width="1.5" PointX="5.25" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Order" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Product" Width="1.5" PointX="3" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.Shape" Width="1.5" PointX="0.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.SpongeCake" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BakeryModel.sysdiagram" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Acces__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Addit__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__Customers__Adres__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Cream__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Filli__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Finis__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Icing__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Level__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Shape__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__CakeCreat__Spong__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__Orders__CakeCrea__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__Products__Catego__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__Customers__Compa__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__FinishedO__Custo__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__FinishedO__Order__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__FinishedO__Order__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="BakeryModel.FK__OrderDeta__Produ__44FF419A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

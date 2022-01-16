@@ -1,0 +1,90 @@
+﻿@model Bakery.Models.CakeCreator
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CakeCreator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Accesory.AccesoryType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accesory.AccesoryType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Additive.AdditionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Additive.AdditionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cream.CreamsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cream.CreamsType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Filling.FillingType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Filling.FillingType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Finish.FinishType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Finish.FinishType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Icing.IcingsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icing.IcingsType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level.LevelID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level.LevelID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shape.ShapeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shape.ShapeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpongeCake.SpongeCakeType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpongeCake.SpongeCakeType)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CakeCreatorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

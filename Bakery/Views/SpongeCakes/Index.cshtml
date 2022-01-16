@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Bakery.Models.SpongeCake>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpongeCakeType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpongeCakeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SpongeCakeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SpongeCakeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SpongeCakeID })
+        </td>
+    </tr>
+}
+
+</table>

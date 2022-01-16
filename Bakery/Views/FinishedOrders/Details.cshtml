@@ -1,0 +1,42 @@
+﻿@model Bakery.Models.FinishedOrder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FinishedOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.OrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.OrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDetail.OrderDetailsID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDetail.OrderDetailsID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FinishedOrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model Bakery.Models.Adress
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Adress</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HouseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AptNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AptNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZIPcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZIPcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AdressID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

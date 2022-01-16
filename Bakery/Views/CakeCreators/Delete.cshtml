@@ -1,0 +1,96 @@
+﻿@model Bakery.Models.CakeCreator
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CakeCreator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Accesory.AccesoryType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accesory.AccesoryType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Additive.AdditionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Additive.AdditionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cream.CreamsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cream.CreamsType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Filling.FillingType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Filling.FillingType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Finish.FinishType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Finish.FinishType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Icing.IcingsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icing.IcingsType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level.LevelID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level.LevelID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shape.ShapeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shape.ShapeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpongeCake.SpongeCakeType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpongeCake.SpongeCakeType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

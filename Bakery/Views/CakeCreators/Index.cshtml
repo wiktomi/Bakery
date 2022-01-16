@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Bakery.Models.CakeCreator>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Accesory.AccesoryType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Additive.AdditionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cream.CreamsType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Filling.FillingType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Finish.FinishType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Icing.IcingsType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level.LevelID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shape.ShapeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpongeCake.SpongeCakeType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Accesory.AccesoryType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Additive.AdditionType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cream.CreamsType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Filling.FillingType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Finish.FinishType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Icing.IcingsType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Level.LevelID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shape.ShapeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpongeCake.SpongeCakeType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CakeCreatorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CakeCreatorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CakeCreatorID })
+        </td>
+    </tr>
+}
+
+</table>
