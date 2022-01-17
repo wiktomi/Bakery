@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BakeryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BakeryAzureModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accesories">
           <Key>
             <PropertyRef Name="AccesoryID" />
@@ -168,17 +168,7 @@
           <Property Name="SpongeCakeType" Type="varchar" MaxLength="30" />
           <Property Name="Price" Type="decimal" Precision="4" Scale="2" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
-        <Association Name="FK__CakeCreat__Acces__5165187F">
+        <Association Name="FK__CakeCreat__Acces__02084FDA">
           <End Role="Accesories" Type="Self.Accesories" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -190,7 +180,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Addit__5070F446">
+        <Association Name="FK__CakeCreat__Addit__01142BA1">
           <End Role="Additives" Type="Self.Additives" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -202,7 +192,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Cream__4CA06362">
+        <Association Name="FK__CakeCreat__Cream__7D439ABD">
           <End Role="Creams" Type="Self.Creams" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -214,7 +204,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Filli__4D94879B">
+        <Association Name="FK__CakeCreat__Filli__7E37BEF6">
           <End Role="Fillings" Type="Self.Fillings" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -226,7 +216,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Finis__4F7CD00D">
+        <Association Name="FK__CakeCreat__Finis__00200768">
           <End Role="Finishes" Type="Self.Finishes" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -238,7 +228,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Icing__4E88ABD4">
+        <Association Name="FK__CakeCreat__Icing__7F2BE32F">
           <End Role="Icings" Type="Self.Icings" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -250,7 +240,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Level__4AB81AF0">
+        <Association Name="FK__CakeCreat__Level__03F0984C">
           <End Role="Levels" Type="Self.Levels" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -262,7 +252,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Shape__49C3F6B7">
+        <Association Name="FK__CakeCreat__Shape__02FC7413">
           <End Role="Shapes" Type="Self.Shapes" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -274,7 +264,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Spong__4BAC3F29">
+        <Association Name="FK__CakeCreat__Spong__04E4BC85">
           <End Role="SpongeCakes" Type="Self.SpongeCakes" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -286,7 +276,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Customers__Adres__4316F928">
+        <Association Name="FK__Customers__Adres__05D8E0BE">
           <End Role="Adresses" Type="Self.Adresses" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
@@ -298,7 +288,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Customers__Compa__440B1D61">
+        <Association Name="FK__Customers__Compa__06CD04F7">
           <End Role="Companies" Type="Self.Companies" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
           <ReferentialConstraint>
@@ -310,7 +300,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FinishedO__Custo__5EBF139D">
+        <Association Name="FK__FinishedO__Custo__07C12930">
           <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
           <End Role="FinishedOrder" Type="Self.FinishedOrder" Multiplicity="*" />
           <ReferentialConstraint>
@@ -322,7 +312,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FinishedO__Order__5FB337D6">
+        <Association Name="FK__FinishedO__Order__08B54D69">
           <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
           <End Role="FinishedOrder" Type="Self.FinishedOrder" Multiplicity="*" />
           <ReferentialConstraint>
@@ -334,7 +324,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FinishedO__Order__60A75C0F">
+        <Association Name="FK__FinishedO__Order__09A971A2">
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="0..1" />
           <End Role="FinishedOrder" Type="Self.FinishedOrder" Multiplicity="*" />
           <ReferentialConstraint>
@@ -346,7 +336,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__Produ__44FF419A">
+        <Association Name="FK__OrderDeta__Produ__0A9D95DB">
           <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
@@ -358,7 +348,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__CakeCrea__47DBAE45">
+        <Association Name="FK__Orders__CakeCrea__0B91BA14">
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -370,7 +360,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__Catego__48CFD27E">
+        <Association Name="FK__Products__Catego__0C85DE4D">
           <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -382,7 +372,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BakeryModelStoreContainer">
+        <EntityContainer Name="BakeryAzureModelStoreContainer">
           <EntitySet Name="Accesories" EntityType="Self.Accesories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Additives" EntityType="Self.Additives" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Adresses" EntityType="Self.Adresses" Schema="dbo" store:Type="Tables" />
@@ -401,72 +391,71 @@
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Shapes" EntityType="Self.Shapes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SpongeCakes" EntityType="Self.SpongeCakes" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__CakeCreat__Acces__5165187F" Association="Self.FK__CakeCreat__Acces__5165187F">
+          <AssociationSet Name="FK__CakeCreat__Acces__02084FDA" Association="Self.FK__CakeCreat__Acces__02084FDA">
             <End Role="Accesories" EntitySet="Accesories" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Addit__5070F446" Association="Self.FK__CakeCreat__Addit__5070F446">
+          <AssociationSet Name="FK__CakeCreat__Addit__01142BA1" Association="Self.FK__CakeCreat__Addit__01142BA1">
             <End Role="Additives" EntitySet="Additives" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Cream__4CA06362" Association="Self.FK__CakeCreat__Cream__4CA06362">
+          <AssociationSet Name="FK__CakeCreat__Cream__7D439ABD" Association="Self.FK__CakeCreat__Cream__7D439ABD">
             <End Role="Creams" EntitySet="Creams" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Filli__4D94879B" Association="Self.FK__CakeCreat__Filli__4D94879B">
+          <AssociationSet Name="FK__CakeCreat__Filli__7E37BEF6" Association="Self.FK__CakeCreat__Filli__7E37BEF6">
             <End Role="Fillings" EntitySet="Fillings" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Finis__4F7CD00D" Association="Self.FK__CakeCreat__Finis__4F7CD00D">
+          <AssociationSet Name="FK__CakeCreat__Finis__00200768" Association="Self.FK__CakeCreat__Finis__00200768">
             <End Role="Finishes" EntitySet="Finishes" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Icing__4E88ABD4" Association="Self.FK__CakeCreat__Icing__4E88ABD4">
+          <AssociationSet Name="FK__CakeCreat__Icing__7F2BE32F" Association="Self.FK__CakeCreat__Icing__7F2BE32F">
             <End Role="Icings" EntitySet="Icings" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Level__4AB81AF0" Association="Self.FK__CakeCreat__Level__4AB81AF0">
+          <AssociationSet Name="FK__CakeCreat__Level__03F0984C" Association="Self.FK__CakeCreat__Level__03F0984C">
             <End Role="Levels" EntitySet="Levels" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Shape__49C3F6B7" Association="Self.FK__CakeCreat__Shape__49C3F6B7">
+          <AssociationSet Name="FK__CakeCreat__Shape__02FC7413" Association="Self.FK__CakeCreat__Shape__02FC7413">
             <End Role="Shapes" EntitySet="Shapes" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Spong__4BAC3F29" Association="Self.FK__CakeCreat__Spong__4BAC3F29">
+          <AssociationSet Name="FK__CakeCreat__Spong__04E4BC85" Association="Self.FK__CakeCreat__Spong__04E4BC85">
             <End Role="SpongeCakes" EntitySet="SpongeCakes" />
             <End Role="CakeCreator" EntitySet="CakeCreator" />
           </AssociationSet>
-          <AssociationSet Name="FK__Customers__Adres__4316F928" Association="Self.FK__Customers__Adres__4316F928">
+          <AssociationSet Name="FK__Customers__Adres__05D8E0BE" Association="Self.FK__Customers__Adres__05D8E0BE">
             <End Role="Adresses" EntitySet="Adresses" />
             <End Role="Customers" EntitySet="Customers" />
           </AssociationSet>
-          <AssociationSet Name="FK__Customers__Compa__440B1D61" Association="Self.FK__Customers__Compa__440B1D61">
+          <AssociationSet Name="FK__Customers__Compa__06CD04F7" Association="Self.FK__Customers__Compa__06CD04F7">
             <End Role="Companies" EntitySet="Companies" />
             <End Role="Customers" EntitySet="Customers" />
           </AssociationSet>
-          <AssociationSet Name="FK__FinishedO__Custo__5EBF139D" Association="Self.FK__FinishedO__Custo__5EBF139D">
+          <AssociationSet Name="FK__FinishedO__Custo__07C12930" Association="Self.FK__FinishedO__Custo__07C12930">
             <End Role="Customers" EntitySet="Customers" />
             <End Role="FinishedOrder" EntitySet="FinishedOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK__FinishedO__Order__5FB337D6" Association="Self.FK__FinishedO__Order__5FB337D6">
+          <AssociationSet Name="FK__FinishedO__Order__08B54D69" Association="Self.FK__FinishedO__Order__08B54D69">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="FinishedOrder" EntitySet="FinishedOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK__FinishedO__Order__60A75C0F" Association="Self.FK__FinishedO__Order__60A75C0F">
+          <AssociationSet Name="FK__FinishedO__Order__09A971A2" Association="Self.FK__FinishedO__Order__09A971A2">
             <End Role="OrderDetails" EntitySet="OrderDetails" />
             <End Role="FinishedOrder" EntitySet="FinishedOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__Produ__44FF419A" Association="Self.FK__OrderDeta__Produ__44FF419A">
+          <AssociationSet Name="FK__OrderDeta__Produ__0A9D95DB" Association="Self.FK__OrderDeta__Produ__0A9D95DB">
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__CakeCrea__47DBAE45" Association="Self.FK__Orders__CakeCrea__47DBAE45">
+          <AssociationSet Name="FK__Orders__CakeCrea__0B91BA14" Association="Self.FK__Orders__CakeCrea__0B91BA14">
             <End Role="CakeCreator" EntitySet="CakeCreator" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__Catego__48CFD27E" Association="Self.FK__Products__Catego__48CFD27E">
+          <AssociationSet Name="FK__Products__Catego__0C85DE4D" Association="Self.FK__Products__Catego__0C85DE4D">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
@@ -475,7 +464,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BakeryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="BakeryAzureModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Accesory">
           <Key>
             <PropertyRef Name="AccesoryID" />
@@ -483,7 +472,7 @@
           <Property Name="AccesoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AccesoryType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Acces__5165187F" FromRole="Accesories" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Acces__02084FDA" FromRole="Accesories" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="Additive">
           <Key>
@@ -492,7 +481,7 @@
           <Property Name="AdditionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AdditionType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Addit__5070F446" FromRole="Additives" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Addit__01142BA1" FromRole="Additives" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="Adress">
           <Key>
@@ -504,7 +493,7 @@
           <Property Name="AptNumber" Type="Int32" />
           <Property Name="ZIPcode" Type="Int32" />
           <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Customers" Relationship="Self.FK__Customers__Adres__4316F928" FromRole="Adresses" ToRole="Customers" />
+          <NavigationProperty Name="Customers" Relationship="Self.FK__Customers__Adres__05D8E0BE" FromRole="Adresses" ToRole="Customers" />
         </EntityType>
         <EntityType Name="CakeCreator">
           <Key>
@@ -520,16 +509,16 @@
           <Property Name="FinishID" Type="Int32" />
           <Property Name="AdditionID" Type="Int32" />
           <Property Name="AccesoryID" Type="Int32" />
-          <NavigationProperty Name="Accesory" Relationship="Self.FK__CakeCreat__Acces__5165187F" FromRole="CakeCreator" ToRole="Accesories" />
-          <NavigationProperty Name="Additive" Relationship="Self.FK__CakeCreat__Addit__5070F446" FromRole="CakeCreator" ToRole="Additives" />
-          <NavigationProperty Name="Cream" Relationship="Self.FK__CakeCreat__Cream__4CA06362" FromRole="CakeCreator" ToRole="Creams" />
-          <NavigationProperty Name="Filling" Relationship="Self.FK__CakeCreat__Filli__4D94879B" FromRole="CakeCreator" ToRole="Fillings" />
-          <NavigationProperty Name="Finish" Relationship="Self.FK__CakeCreat__Finis__4F7CD00D" FromRole="CakeCreator" ToRole="Finishes" />
-          <NavigationProperty Name="Icing" Relationship="Self.FK__CakeCreat__Icing__4E88ABD4" FromRole="CakeCreator" ToRole="Icings" />
-          <NavigationProperty Name="Level" Relationship="Self.FK__CakeCreat__Level__4AB81AF0" FromRole="CakeCreator" ToRole="Levels" />
-          <NavigationProperty Name="Shape" Relationship="Self.FK__CakeCreat__Shape__49C3F6B7" FromRole="CakeCreator" ToRole="Shapes" />
-          <NavigationProperty Name="SpongeCake" Relationship="Self.FK__CakeCreat__Spong__4BAC3F29" FromRole="CakeCreator" ToRole="SpongeCakes" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__CakeCrea__47DBAE45" FromRole="CakeCreator" ToRole="Orders" />
+          <NavigationProperty Name="Accesory" Relationship="Self.FK__CakeCreat__Acces__02084FDA" FromRole="CakeCreator" ToRole="Accesories" />
+          <NavigationProperty Name="Additive" Relationship="Self.FK__CakeCreat__Addit__01142BA1" FromRole="CakeCreator" ToRole="Additives" />
+          <NavigationProperty Name="Cream" Relationship="Self.FK__CakeCreat__Cream__7D439ABD" FromRole="CakeCreator" ToRole="Creams" />
+          <NavigationProperty Name="Filling" Relationship="Self.FK__CakeCreat__Filli__7E37BEF6" FromRole="CakeCreator" ToRole="Fillings" />
+          <NavigationProperty Name="Finish" Relationship="Self.FK__CakeCreat__Finis__00200768" FromRole="CakeCreator" ToRole="Finishes" />
+          <NavigationProperty Name="Icing" Relationship="Self.FK__CakeCreat__Icing__7F2BE32F" FromRole="CakeCreator" ToRole="Icings" />
+          <NavigationProperty Name="Level" Relationship="Self.FK__CakeCreat__Level__03F0984C" FromRole="CakeCreator" ToRole="Levels" />
+          <NavigationProperty Name="Shape" Relationship="Self.FK__CakeCreat__Shape__02FC7413" FromRole="CakeCreator" ToRole="Shapes" />
+          <NavigationProperty Name="SpongeCake" Relationship="Self.FK__CakeCreat__Spong__04E4BC85" FromRole="CakeCreator" ToRole="SpongeCakes" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__CakeCrea__0B91BA14" FromRole="CakeCreator" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -537,7 +526,7 @@
           </Key>
           <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__48CFD27E" FromRole="Categories" ToRole="Products" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__0C85DE4D" FromRole="Categories" ToRole="Products" />
         </EntityType>
         <EntityType Name="Company">
           <Key>
@@ -546,7 +535,7 @@
           <Property Name="CompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CompanyName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="NIPCode" Type="Int32" />
-          <NavigationProperty Name="Customers" Relationship="Self.FK__Customers__Compa__440B1D61" FromRole="Companies" ToRole="Customers" />
+          <NavigationProperty Name="Customers" Relationship="Self.FK__Customers__Compa__06CD04F7" FromRole="Companies" ToRole="Customers" />
         </EntityType>
         <EntityType Name="Cream">
           <Key>
@@ -555,7 +544,7 @@
           <Property Name="CreamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CreamsType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Cream__4CA06362" FromRole="Creams" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Cream__7D439ABD" FromRole="Creams" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -568,9 +557,9 @@
           <Property Name="MailAdress" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="AdressID" Type="Int32" />
           <Property Name="CompanyID" Type="Int32" />
-          <NavigationProperty Name="Adress" Relationship="Self.FK__Customers__Adres__4316F928" FromRole="Customers" ToRole="Adresses" />
-          <NavigationProperty Name="Company" Relationship="Self.FK__Customers__Compa__440B1D61" FromRole="Customers" ToRole="Companies" />
-          <NavigationProperty Name="FinishedOrders" Relationship="Self.FK__FinishedO__Custo__5EBF139D" FromRole="Customers" ToRole="FinishedOrder" />
+          <NavigationProperty Name="Adress" Relationship="Self.FK__Customers__Adres__05D8E0BE" FromRole="Customers" ToRole="Adresses" />
+          <NavigationProperty Name="Company" Relationship="Self.FK__Customers__Compa__06CD04F7" FromRole="Customers" ToRole="Companies" />
+          <NavigationProperty Name="FinishedOrders" Relationship="Self.FK__FinishedO__Custo__07C12930" FromRole="Customers" ToRole="FinishedOrder" />
         </EntityType>
         <EntityType Name="Filling">
           <Key>
@@ -579,7 +568,7 @@
           <Property Name="FillingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FillingType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Filli__4D94879B" FromRole="Fillings" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Filli__7E37BEF6" FromRole="Fillings" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="FinishedOrder">
           <Key>
@@ -589,9 +578,9 @@
           <Property Name="CustomerID" Type="Int32" />
           <Property Name="OrderID" Type="Int32" />
           <Property Name="OrderDetailsID" Type="Int32" />
-          <NavigationProperty Name="Customer" Relationship="Self.FK__FinishedO__Custo__5EBF139D" FromRole="FinishedOrder" ToRole="Customers" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__FinishedO__Order__5FB337D6" FromRole="FinishedOrder" ToRole="Orders" />
-          <NavigationProperty Name="OrderDetail" Relationship="Self.FK__FinishedO__Order__60A75C0F" FromRole="FinishedOrder" ToRole="OrderDetails" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK__FinishedO__Custo__07C12930" FromRole="FinishedOrder" ToRole="Customers" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__FinishedO__Order__08B54D69" FromRole="FinishedOrder" ToRole="Orders" />
+          <NavigationProperty Name="OrderDetail" Relationship="Self.FK__FinishedO__Order__09A971A2" FromRole="FinishedOrder" ToRole="OrderDetails" />
         </EntityType>
         <EntityType Name="Finish">
           <Key>
@@ -600,7 +589,7 @@
           <Property Name="FinishID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FinishType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Finis__4F7CD00D" FromRole="Finishes" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Finis__00200768" FromRole="Finishes" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="Icing">
           <Key>
@@ -609,7 +598,7 @@
           <Property Name="IcingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IcingsType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Icing__4E88ABD4" FromRole="Icings" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Icing__7F2BE32F" FromRole="Icings" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="Level">
           <Key>
@@ -618,7 +607,7 @@
           <Property Name="LevelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LevelCount" Type="Int32" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Level__4AB81AF0" FromRole="Levels" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Level__03F0984C" FromRole="Levels" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -628,8 +617,8 @@
           <Property Name="ProductID" Type="Int32" />
           <Property Name="Quantity" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="OrderPrice" Type="Decimal" Precision="2" Scale="0" />
-          <NavigationProperty Name="FinishedOrders" Relationship="Self.FK__FinishedO__Order__60A75C0F" FromRole="OrderDetails" ToRole="FinishedOrder" />
-          <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__44FF419A" FromRole="OrderDetails" ToRole="Products" />
+          <NavigationProperty Name="FinishedOrders" Relationship="Self.FK__FinishedO__Order__09A971A2" FromRole="OrderDetails" ToRole="FinishedOrder" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__0A9D95DB" FromRole="OrderDetails" ToRole="Products" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -638,8 +627,8 @@
           <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrderDate" Type="DateTime" Precision="3" />
           <Property Name="CakeCreatorID" Type="Int32" />
-          <NavigationProperty Name="CakeCreator" Relationship="Self.FK__Orders__CakeCrea__47DBAE45" FromRole="Orders" ToRole="CakeCreator" />
-          <NavigationProperty Name="FinishedOrders" Relationship="Self.FK__FinishedO__Order__5FB337D6" FromRole="Orders" ToRole="FinishedOrder" />
+          <NavigationProperty Name="CakeCreator" Relationship="Self.FK__Orders__CakeCrea__0B91BA14" FromRole="Orders" ToRole="CakeCreator" />
+          <NavigationProperty Name="FinishedOrders" Relationship="Self.FK__FinishedO__Order__08B54D69" FromRole="Orders" ToRole="FinishedOrder" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -652,8 +641,8 @@
           <Property Name="ProductDescription" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <Property Name="ProductSize" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ProductsInStock" Type="Int32" />
-          <NavigationProperty Name="Category" Relationship="Self.FK__Products__Catego__48CFD27E" FromRole="Products" ToRole="Categories" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__44FF419A" FromRole="Products" ToRole="OrderDetails" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Products__Catego__0C85DE4D" FromRole="Products" ToRole="Categories" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__0A9D95DB" FromRole="Products" ToRole="OrderDetails" />
         </EntityType>
         <EntityType Name="Shape">
           <Key>
@@ -662,7 +651,7 @@
           <Property Name="ShapeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ShapeName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Shape__49C3F6B7" FromRole="Shapes" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Shape__02FC7413" FromRole="Shapes" ToRole="CakeCreator" />
         </EntityType>
         <EntityType Name="SpongeCake">
           <Key>
@@ -671,19 +660,9 @@
           <Property Name="SpongeCakeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SpongeCakeType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
-          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Spong__4BAC3F29" FromRole="SpongeCakes" ToRole="CakeCreator" />
+          <NavigationProperty Name="CakeCreators" Relationship="Self.FK__CakeCreat__Spong__04E4BC85" FromRole="SpongeCakes" ToRole="CakeCreator" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <Association Name="FK__CakeCreat__Acces__5165187F">
+        <Association Name="FK__CakeCreat__Acces__02084FDA">
           <End Role="Accesories" Type="Self.Accesory" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -695,7 +674,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Addit__5070F446">
+        <Association Name="FK__CakeCreat__Addit__01142BA1">
           <End Role="Additives" Type="Self.Additive" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -707,7 +686,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Customers__Adres__4316F928">
+        <Association Name="FK__Customers__Adres__05D8E0BE">
           <End Role="Adresses" Type="Self.Adress" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
           <ReferentialConstraint>
@@ -719,7 +698,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Cream__4CA06362">
+        <Association Name="FK__CakeCreat__Cream__7D439ABD">
           <End Role="Creams" Type="Self.Cream" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -731,7 +710,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Filli__4D94879B">
+        <Association Name="FK__CakeCreat__Filli__7E37BEF6">
           <End Role="Fillings" Type="Self.Filling" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -743,7 +722,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Finis__4F7CD00D">
+        <Association Name="FK__CakeCreat__Finis__00200768">
           <End Role="Finishes" Type="Self.Finish" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -755,7 +734,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Icing__4E88ABD4">
+        <Association Name="FK__CakeCreat__Icing__7F2BE32F">
           <End Role="Icings" Type="Self.Icing" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -767,7 +746,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Level__4AB81AF0">
+        <Association Name="FK__CakeCreat__Level__03F0984C">
           <End Role="Levels" Type="Self.Level" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -779,7 +758,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Shape__49C3F6B7">
+        <Association Name="FK__CakeCreat__Shape__02FC7413">
           <End Role="Shapes" Type="Self.Shape" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -791,7 +770,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CakeCreat__Spong__4BAC3F29">
+        <Association Name="FK__CakeCreat__Spong__04E4BC85">
           <End Role="SpongeCakes" Type="Self.SpongeCake" Multiplicity="0..1" />
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="*" />
           <ReferentialConstraint>
@@ -803,7 +782,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__CakeCrea__47DBAE45">
+        <Association Name="FK__Orders__CakeCrea__0B91BA14">
           <End Role="CakeCreator" Type="Self.CakeCreator" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -815,7 +794,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__Catego__48CFD27E">
+        <Association Name="FK__Products__Catego__0C85DE4D">
           <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -827,7 +806,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Customers__Compa__440B1D61">
+        <Association Name="FK__Customers__Compa__06CD04F7">
           <End Role="Companies" Type="Self.Company" Multiplicity="0..1" />
           <End Role="Customers" Type="Self.Customer" Multiplicity="*" />
           <ReferentialConstraint>
@@ -839,7 +818,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FinishedO__Custo__5EBF139D">
+        <Association Name="FK__FinishedO__Custo__07C12930">
           <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
           <End Role="FinishedOrder" Type="Self.FinishedOrder" Multiplicity="*" />
           <ReferentialConstraint>
@@ -851,7 +830,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FinishedO__Order__5FB337D6">
+        <Association Name="FK__FinishedO__Order__08B54D69">
           <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
           <End Role="FinishedOrder" Type="Self.FinishedOrder" Multiplicity="*" />
           <ReferentialConstraint>
@@ -863,7 +842,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FinishedO__Order__60A75C0F">
+        <Association Name="FK__FinishedO__Order__09A971A2">
           <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="0..1" />
           <End Role="FinishedOrder" Type="Self.FinishedOrder" Multiplicity="*" />
           <ReferentialConstraint>
@@ -875,7 +854,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__Produ__44FF419A">
+        <Association Name="FK__OrderDeta__Produ__0A9D95DB">
           <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -887,7 +866,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BakeryEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BakeryAzureEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accesories" EntityType="Self.Accesory" />
           <EntitySet Name="Additives" EntityType="Self.Additive" />
           <EntitySet Name="Adresses" EntityType="Self.Adress" />
@@ -906,72 +885,71 @@
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="Shapes" EntityType="Self.Shape" />
           <EntitySet Name="SpongeCakes" EntityType="Self.SpongeCake" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <AssociationSet Name="FK__CakeCreat__Acces__5165187F" Association="Self.FK__CakeCreat__Acces__5165187F">
+          <AssociationSet Name="FK__CakeCreat__Acces__02084FDA" Association="Self.FK__CakeCreat__Acces__02084FDA">
             <End Role="Accesories" EntitySet="Accesories" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Addit__5070F446" Association="Self.FK__CakeCreat__Addit__5070F446">
+          <AssociationSet Name="FK__CakeCreat__Addit__01142BA1" Association="Self.FK__CakeCreat__Addit__01142BA1">
             <End Role="Additives" EntitySet="Additives" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__Customers__Adres__4316F928" Association="Self.FK__Customers__Adres__4316F928">
+          <AssociationSet Name="FK__Customers__Adres__05D8E0BE" Association="Self.FK__Customers__Adres__05D8E0BE">
             <End Role="Adresses" EntitySet="Adresses" />
             <End Role="Customers" EntitySet="Customers" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Cream__4CA06362" Association="Self.FK__CakeCreat__Cream__4CA06362">
+          <AssociationSet Name="FK__CakeCreat__Cream__7D439ABD" Association="Self.FK__CakeCreat__Cream__7D439ABD">
             <End Role="Creams" EntitySet="Creams" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Filli__4D94879B" Association="Self.FK__CakeCreat__Filli__4D94879B">
+          <AssociationSet Name="FK__CakeCreat__Filli__7E37BEF6" Association="Self.FK__CakeCreat__Filli__7E37BEF6">
             <End Role="Fillings" EntitySet="Fillings" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Finis__4F7CD00D" Association="Self.FK__CakeCreat__Finis__4F7CD00D">
+          <AssociationSet Name="FK__CakeCreat__Finis__00200768" Association="Self.FK__CakeCreat__Finis__00200768">
             <End Role="Finishes" EntitySet="Finishes" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Icing__4E88ABD4" Association="Self.FK__CakeCreat__Icing__4E88ABD4">
+          <AssociationSet Name="FK__CakeCreat__Icing__7F2BE32F" Association="Self.FK__CakeCreat__Icing__7F2BE32F">
             <End Role="Icings" EntitySet="Icings" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Level__4AB81AF0" Association="Self.FK__CakeCreat__Level__4AB81AF0">
+          <AssociationSet Name="FK__CakeCreat__Level__03F0984C" Association="Self.FK__CakeCreat__Level__03F0984C">
             <End Role="Levels" EntitySet="Levels" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Shape__49C3F6B7" Association="Self.FK__CakeCreat__Shape__49C3F6B7">
+          <AssociationSet Name="FK__CakeCreat__Shape__02FC7413" Association="Self.FK__CakeCreat__Shape__02FC7413">
             <End Role="Shapes" EntitySet="Shapes" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__CakeCreat__Spong__4BAC3F29" Association="Self.FK__CakeCreat__Spong__4BAC3F29">
+          <AssociationSet Name="FK__CakeCreat__Spong__04E4BC85" Association="Self.FK__CakeCreat__Spong__04E4BC85">
             <End Role="SpongeCakes" EntitySet="SpongeCakes" />
             <End Role="CakeCreator" EntitySet="CakeCreators" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__CakeCrea__47DBAE45" Association="Self.FK__Orders__CakeCrea__47DBAE45">
+          <AssociationSet Name="FK__Orders__CakeCrea__0B91BA14" Association="Self.FK__Orders__CakeCrea__0B91BA14">
             <End Role="CakeCreator" EntitySet="CakeCreators" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__Catego__48CFD27E" Association="Self.FK__Products__Catego__48CFD27E">
+          <AssociationSet Name="FK__Products__Catego__0C85DE4D" Association="Self.FK__Products__Catego__0C85DE4D">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__Customers__Compa__440B1D61" Association="Self.FK__Customers__Compa__440B1D61">
+          <AssociationSet Name="FK__Customers__Compa__06CD04F7" Association="Self.FK__Customers__Compa__06CD04F7">
             <End Role="Companies" EntitySet="Companies" />
             <End Role="Customers" EntitySet="Customers" />
           </AssociationSet>
-          <AssociationSet Name="FK__FinishedO__Custo__5EBF139D" Association="Self.FK__FinishedO__Custo__5EBF139D">
+          <AssociationSet Name="FK__FinishedO__Custo__07C12930" Association="Self.FK__FinishedO__Custo__07C12930">
             <End Role="Customers" EntitySet="Customers" />
             <End Role="FinishedOrder" EntitySet="FinishedOrders" />
           </AssociationSet>
-          <AssociationSet Name="FK__FinishedO__Order__5FB337D6" Association="Self.FK__FinishedO__Order__5FB337D6">
+          <AssociationSet Name="FK__FinishedO__Order__08B54D69" Association="Self.FK__FinishedO__Order__08B54D69">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="FinishedOrder" EntitySet="FinishedOrders" />
           </AssociationSet>
-          <AssociationSet Name="FK__FinishedO__Order__60A75C0F" Association="Self.FK__FinishedO__Order__60A75C0F">
+          <AssociationSet Name="FK__FinishedO__Order__09A971A2" Association="Self.FK__FinishedO__Order__09A971A2">
             <End Role="OrderDetails" EntitySet="OrderDetails" />
             <End Role="FinishedOrder" EntitySet="FinishedOrders" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__Produ__44FF419A" Association="Self.FK__OrderDeta__Produ__44FF419A">
+          <AssociationSet Name="FK__OrderDeta__Produ__0A9D95DB" Association="Self.FK__OrderDeta__Produ__0A9D95DB">
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
@@ -981,9 +959,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BakeryModelStoreContainer" CdmEntityContainer="BakeryEntities">
+        <EntityContainerMapping StorageEntityContainer="BakeryAzureModelStoreContainer" CdmEntityContainer="BakeryAzureEntities">
           <EntitySetMapping Name="Accesories">
-            <EntityTypeMapping TypeName="BakeryModel.Accesory">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Accesory">
               <MappingFragment StoreEntitySet="Accesories">
                 <ScalarProperty Name="AccesoryID" ColumnName="AccesoryID" />
                 <ScalarProperty Name="AccesoryType" ColumnName="AccesoryType" />
@@ -992,7 +970,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Additives">
-            <EntityTypeMapping TypeName="BakeryModel.Additive">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Additive">
               <MappingFragment StoreEntitySet="Additives">
                 <ScalarProperty Name="AdditionID" ColumnName="AdditionID" />
                 <ScalarProperty Name="AdditionType" ColumnName="AdditionType" />
@@ -1001,7 +979,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Adresses">
-            <EntityTypeMapping TypeName="BakeryModel.Adress">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Adress">
               <MappingFragment StoreEntitySet="Adresses">
                 <ScalarProperty Name="AdressID" ColumnName="AdressID" />
                 <ScalarProperty Name="Street" ColumnName="Street" />
@@ -1013,7 +991,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CakeCreators">
-            <EntityTypeMapping TypeName="BakeryModel.CakeCreator">
+            <EntityTypeMapping TypeName="BakeryAzureModel.CakeCreator">
               <MappingFragment StoreEntitySet="CakeCreator">
                 <ScalarProperty Name="CakeCreatorID" ColumnName="CakeCreatorID" />
                 <ScalarProperty Name="ShapeID" ColumnName="ShapeID" />
@@ -1029,7 +1007,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Categories">
-            <EntityTypeMapping TypeName="BakeryModel.Category">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Category">
               <MappingFragment StoreEntitySet="Categories">
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -1037,7 +1015,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Companies">
-            <EntityTypeMapping TypeName="BakeryModel.Company">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Company">
               <MappingFragment StoreEntitySet="Companies">
                 <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
@@ -1046,7 +1024,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Creams">
-            <EntityTypeMapping TypeName="BakeryModel.Cream">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Cream">
               <MappingFragment StoreEntitySet="Creams">
                 <ScalarProperty Name="CreamID" ColumnName="CreamID" />
                 <ScalarProperty Name="CreamsType" ColumnName="CreamsType" />
@@ -1055,7 +1033,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="BakeryModel.Customer">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Customer">
               <MappingFragment StoreEntitySet="Customers">
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -1068,7 +1046,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Fillings">
-            <EntityTypeMapping TypeName="BakeryModel.Filling">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Filling">
               <MappingFragment StoreEntitySet="Fillings">
                 <ScalarProperty Name="FillingID" ColumnName="FillingID" />
                 <ScalarProperty Name="FillingType" ColumnName="FillingType" />
@@ -1077,7 +1055,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FinishedOrders">
-            <EntityTypeMapping TypeName="BakeryModel.FinishedOrder">
+            <EntityTypeMapping TypeName="BakeryAzureModel.FinishedOrder">
               <MappingFragment StoreEntitySet="FinishedOrder">
                 <ScalarProperty Name="FinishedOrderID" ColumnName="FinishedOrderID" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
@@ -1087,7 +1065,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Finishes">
-            <EntityTypeMapping TypeName="BakeryModel.Finish">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Finish">
               <MappingFragment StoreEntitySet="Finishes">
                 <ScalarProperty Name="FinishID" ColumnName="FinishID" />
                 <ScalarProperty Name="FinishType" ColumnName="FinishType" />
@@ -1096,7 +1074,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Icings">
-            <EntityTypeMapping TypeName="BakeryModel.Icing">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Icing">
               <MappingFragment StoreEntitySet="Icings">
                 <ScalarProperty Name="IcingID" ColumnName="IcingID" />
                 <ScalarProperty Name="IcingsType" ColumnName="IcingsType" />
@@ -1105,7 +1083,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Levels">
-            <EntityTypeMapping TypeName="BakeryModel.Level">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Level">
               <MappingFragment StoreEntitySet="Levels">
                 <ScalarProperty Name="LevelID" ColumnName="LevelID" />
                 <ScalarProperty Name="LevelCount" ColumnName="LevelCount" />
@@ -1114,7 +1092,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderDetails">
-            <EntityTypeMapping TypeName="BakeryModel.OrderDetail">
+            <EntityTypeMapping TypeName="BakeryAzureModel.OrderDetail">
               <MappingFragment StoreEntitySet="OrderDetails">
                 <ScalarProperty Name="OrderDetailsID" ColumnName="OrderDetailsID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -1124,7 +1102,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="BakeryModel.Order">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Order">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
@@ -1133,7 +1111,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="BakeryModel.Product">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Product">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
@@ -1146,7 +1124,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Shapes">
-            <EntityTypeMapping TypeName="BakeryModel.Shape">
+            <EntityTypeMapping TypeName="BakeryAzureModel.Shape">
               <MappingFragment StoreEntitySet="Shapes">
                 <ScalarProperty Name="ShapeID" ColumnName="ShapeID" />
                 <ScalarProperty Name="ShapeName" ColumnName="ShapeName" />
@@ -1155,22 +1133,11 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SpongeCakes">
-            <EntityTypeMapping TypeName="BakeryModel.SpongeCake">
+            <EntityTypeMapping TypeName="BakeryAzureModel.SpongeCake">
               <MappingFragment StoreEntitySet="SpongeCakes">
                 <ScalarProperty Name="SpongeCakeID" ColumnName="SpongeCakeID" />
                 <ScalarProperty Name="SpongeCakeType" ColumnName="SpongeCakeType" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="BakeryModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -8,7 +8,7 @@ namespace Bakery.Controllers
 {
     public class OrderDetailsController : Controller
     {
-        private BakeryEntities db = new BakeryEntities();
+        private BakeryAzureEntities db = new BakeryAzureEntities();
 
         // GET: OrderDetails
         public ActionResult Index()

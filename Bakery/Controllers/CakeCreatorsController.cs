@@ -12,7 +12,7 @@ namespace Bakery.Controllers
 {
     public class CakeCreatorsController : Controller
     {
-        private BakeryEntities db = new BakeryEntities();
+        private BakeryAzureEntities db = new BakeryAzureEntities();
 
         // GET: CakeCreators
         public ActionResult Index()
