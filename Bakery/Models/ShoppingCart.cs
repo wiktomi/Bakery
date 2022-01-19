@@ -11,12 +11,16 @@ namespace Bakery.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class ShoppingCart
     {
         public int ShoppingCartID { get; set; }
+        [DisplayName("Nazwa produktu")]
         public string ProductName { get; set; }
+        [DisplayName("Cena")]
         public decimal Price { get; set; }
+        [DisplayName("Data")]
         public System.DateTime StartDate { get; set; }
     }
 }

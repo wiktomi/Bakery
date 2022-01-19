@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Bakery.Models.ShoppingCart>
+
+@{
+    ViewBag.Title = "GetCart";
+}
+
+<h2>Koszyk</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr >
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        
+    </tr>
+}
+</table>
+<hr />
+<div class="text-end">
+    <p class=" fs-3 text-success">Suma: @Model.Sum(i => i.Price) @Html.ActionLink("Złóż zamowienie", "AddToCart",null, new { @class = "btn btn-success" })  </p>
+</div>

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Bakery.Models;
+using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Bakery.Models;
-using AutoMapper;
 
 namespace Bakery.Controllers
 {
@@ -12,7 +9,7 @@ namespace Bakery.Controllers
     {
         BakeryAzureEntities db = new BakeryAzureEntities();
 
-         
+
 
         // GET: Shopping
         public ActionResult Index()
@@ -33,6 +30,12 @@ namespace Bakery.Controllers
             db.ShoppingCarts.Add(shoppingcart);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult GetCart()
+        {
+
+            return View(db.ShoppingCarts.ToList());
         }
     }
 }
