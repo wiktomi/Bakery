@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using Bakery.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using Bakery.Models;
 
 namespace Bakery.Controllers
 {
     public class FinishedOrdersController : Controller
     {
-        private BakeryEntities db = new BakeryEntities();
+        private BakeryAzureEntities db = new BakeryAzureEntities();
 
         // GET: FinishedOrders
         public ActionResult Index()

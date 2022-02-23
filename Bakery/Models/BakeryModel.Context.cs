@@ -13,10 +13,10 @@ namespace Bakery.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BakeryEntities : DbContext
+    public partial class BakeryAzureEntities : DbContext
     {
-        public BakeryEntities()
-            : base("name=BakeryEntities")
+        public BakeryAzureEntities()
+            : base("name=BakeryAzureEntities")
         {
         }
     
@@ -43,6 +43,7 @@ namespace Bakery.Models
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Shape> Shapes { get; set; }
         public virtual DbSet<SpongeCake> SpongeCakes { get; set; }
+        public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }
