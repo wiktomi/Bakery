@@ -43,5 +43,7 @@ namespace Bakery.Models
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Shape> Shapes { get; set; }
         public virtual DbSet<SpongeCake> SpongeCakes { get; set; }
+        public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }
