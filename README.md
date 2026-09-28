@@ -5,4 +5,4 @@
 <p>Funkcjonalność:</p>
 - zarządzanie oferowanymi produktami i cenami
 - zarządzanie klientami
-- dodawani produktów do koszyka i podsumowanie zakupów
+- dodawanie produktów do koszyka i podsumowanie zakupów
